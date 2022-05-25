@@ -1,0 +1,24 @@
+{
+    "name": "boilerplate",
+    "version": "1.0.0",
+    "description": "The node basic boilerplate template",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "start:dev": "nodemon index.js",
+        "format:check": "prettier --check .",
+        "format": "prettier --write ."
+    },
+    "author": "j.patidar1910@gmail.com",
+    "license": "MIT",
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^16.0.1",
+        "express": "^4.18.1",
+        "express-rate-limit": "^6.4.0"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.16",
+        "prettier": "^2.6.2"
+    }
+}
