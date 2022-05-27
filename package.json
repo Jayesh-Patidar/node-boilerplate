@@ -7,7 +7,11 @@
         "start": "node index.js",
         "start:dev": "nodemon index.js",
         "format:check": "prettier --check .",
-        "format": "prettier --write ."
+        "format": "prettier --write .",
+        "migrate:up": "knex migrate:latest",
+        "migrate:down": "knex migrate:rollback",
+        "migration:make": "knex migrate:make",
+        "migration:list": "knex migrate:list"
     },
     "author": "j.patidar1910@gmail.com",
     "license": "MIT",
@@ -15,7 +19,9 @@
         "cors": "^2.8.5",
         "dotenv": "^16.0.1",
         "express": "^4.18.1",
-        "express-rate-limit": "^6.4.0"
+        "express-rate-limit": "^6.4.0",
+        "knex": "^2.1.0",
+        "mysql2": "^2.3.3"
     },
     "devDependencies": {
         "nodemon": "^2.0.16",

@@ -40,7 +40,7 @@ exports.config = (key = "", defaultValue = null) => {
             `No config file found ${fileName ? `with name ${fileName}.js` : ""}`
         );
     }
-    let value;
+    let value = configFileContent;
     keys.forEach((key) => {
         value = value ? value[key] : configFileContent[key];
     });
