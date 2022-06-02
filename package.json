@@ -10,8 +10,11 @@
         "format": "prettier --write .",
         "migrate:up": "knex migrate:latest",
         "migrate:down": "knex migrate:rollback",
-        "migration:make": "knex migrate:make",
-        "migration:list": "knex migrate:list"
+        "migration:create": "knex migrate:make --stub=./database/migrations/stubs/create_table.stub",
+        "migration:alter": "knex migrate:make --stub=./database/migrations/stubs/alter_table.stub",
+        "migration:list": "knex migrate:list",
+        "seed:make": "knex seed:make",
+        "db:seed": "knex seed:run"
     },
     "author": "j.patidar1910@gmail.com",
     "license": "MIT",
