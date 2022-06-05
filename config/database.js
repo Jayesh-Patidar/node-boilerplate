@@ -1,3 +1,4 @@
+const { knexSnakeCaseMappers } = require("objection");
 const { env } = require("../helpers/package/functions");
 
 module.exports = {
@@ -38,4 +39,6 @@ module.exports = {
         extension: "js",
         recursive: true,
     },
+
+    ...knexSnakeCaseMappers(),
 };
