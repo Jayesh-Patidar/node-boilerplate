@@ -10,17 +10,8 @@ class Model extends BaseModel {
      */
     static selectable = [];
 
-    /**
-     * Excludes soft deleted rows from the query.
-     */
-    static excludesSoftDeleted = true;
-
     static query(...args) {
         const query = super.query(...args).select(...(this.selectable || []));
-
-        if (this.excludesSoftDeleted) {
-            query.whereNull("deleted_at");
-        }
 
         return query;
     }
