@@ -10,8 +10,10 @@ exports.up = function (knex) {
         table.string("last_name").nullable();
         table.string("user_name").nullable();
         table.string("email").nullable();
+        table.timestamp('email_verified_at', { useTz: true }).nullable();
         table.string("calling_code").nullable();
         table.string("phone").nullable();
+        table.timestamp('phone_verified_at', { useTz: true }).nullable();
         table.string("password").nullable();
         table.bigInteger("created_by").unsigned().nullable();
         table.bigInteger("updated_by").unsigned().nullable();
