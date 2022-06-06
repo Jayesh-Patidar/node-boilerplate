@@ -7,7 +7,7 @@ module.exports = {
     | This value is used to set the prefix for API.
     |
     */
-    prefix: "/api/",
+    prefix: "/api/:role",
 
     /*
     |--------------------------------------------------------------------------
